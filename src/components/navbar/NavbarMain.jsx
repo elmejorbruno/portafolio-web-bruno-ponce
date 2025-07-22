@@ -5,17 +5,35 @@ import NavbarLogin from "./NavbarLogin"
 
 const NavbarMain = () => {
   return (
-    <div>
-        <Nav>
+   
+        <ContainerNav> 
+            <NavWrapper>
             <NavbarLogin/>
             <NavbarLinks/>
             <NavbarBtn/>
-        </Nav>
+             </NavWrapper>
+        </ContainerNav>
         
-    </div>
+   
   )
 }
 
 export default NavbarMain
 
-const Nav = styled
+const ContainerNav = styled.nav`
+    width: 100%;
+   
+`;
+
+const NavWrapper = styled.div`
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #645559;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 1px ;
+    box-shadow: 0px 1px 10px rgba(151, 154, 89, 0.5);
+`;

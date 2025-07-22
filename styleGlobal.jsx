@@ -14,6 +14,9 @@ export const theme = {
     lightGrey: '#978b85',
     darkGrey: '#3f4141',
   },
+  extends: {
+    cyanShadow: '0px 0px 20px 0px rgba(94, 206, 220, 0.5)'
+  },
   fonts: {
     body: "'Josefin Sans', sans-serif",
     special: "'Roboto', sans-serif",
