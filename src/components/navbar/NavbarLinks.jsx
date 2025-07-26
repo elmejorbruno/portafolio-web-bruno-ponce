@@ -4,30 +4,31 @@ import styled from "styled-components"
 const Links = [
   {
     link: "About Me", 
-    section: 'about' 
+    section: 'Sobre mi' 
   },
   {
    link: "Skills",
-   section: 'skills' 
+   section: 'Habilidades' 
   },
   {
     link: "Experience", 
-    section: 'experience' 
+    section: 'Experiencias' 
   },
   {
     link: "Projects", 
-    section: 'projects' 
+    section: 'Proyectos' 
   },
   {
     link: "Contact", 
-    section: 'contact' 
+    section: 'Contacto' 
   },
   
 ]
 
-const NavbarLinks = () => {
+const NavbarLinks = ({menuMobile}) => {
+
   return (
-    <LinkUl>
+    <LinkUl menuMobile={menuMobile}>
       {Links.map((itemLink, index) => (
         <LinkLi key={index}>
           <Enlace to={itemLink.link} smooth={true} duration={500}>
@@ -43,9 +44,10 @@ export default NavbarLinks
 
 const LinkUl = styled.ul`
 display: flex;
+flex-direction: ${({ menuMobile }) => (menuMobile ? "column" : "row")};
   gap: 1rem;
   list-style: none;
-  color: white;
+  color: #000;
 `;
 
 const LinkLi = styled.li`
@@ -53,7 +55,7 @@ const LinkLi = styled.li`
   font-size: 1.3rem;
  position: relative;
   display: inline-block;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
   transition: color 0.3s ease;
 
@@ -81,7 +83,7 @@ const LinkLi = styled.li`
 `;
 const Enlace = styled(Link)`
     text-decoration: none;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
 
   &:hover {
