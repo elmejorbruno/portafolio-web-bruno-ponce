@@ -10,10 +10,7 @@ const Links = [
    link: "Skills",
    section: 'Habilidades' 
   },
-  {
-    link: "Experience", 
-    section: 'Experiencias' 
-  },
+
   {
     link: "Projects", 
     section: 'Proyectos' 
@@ -45,20 +42,21 @@ export default NavbarLinks
 const LinkUl = styled.ul`
 display: flex;
 flex-direction: ${({ menuMobile }) => (menuMobile ? "column" : "row")};
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   color: #000;
 `;
 
 const LinkLi = styled.li`
  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 1.3rem;
+  font-size: 1rem;
  position: relative;
   display: inline-block;
   color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
   transition: color 0.3s ease;
-
+  text-transform: uppercase;
+  font-weight: bold;
   &:hover {
     color: ${({ theme }) => theme.colors.cyan};
   }
