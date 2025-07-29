@@ -15,24 +15,32 @@ export default HeroPic
 
 const Container = styled.div`
 width: 100%;
+    @media screen and (max-width: 700px) {
+    width: 70%;
+    
+   }
 
 `;
 const WrapperImagen = styled.div`
   width: 100%;
-  height: 90vh;
-  background-color: transparent;
+  height: 110vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 15rem 0 0 0;
+  align-items: center;
+  background-color: transparent;
   overflow: hidden;
+  margin:15rem 0 0 0;
+
   img{
     
     width: 100%;
+    max-width: 400px;
+     display: block;
     object-fit: cover;
       @media screen and (max-width: 700px) {
-    width: 100%;
+    width: 85%;
     
    }
   }
+  
 `;

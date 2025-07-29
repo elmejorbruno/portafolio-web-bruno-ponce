@@ -1,3 +1,4 @@
+import { FaFacebookF } from "react-icons/fa";
 import styled from "styled-components"
 
 const HeroText = () => {
@@ -6,6 +7,12 @@ const HeroText = () => {
         <TitleH2>Front-End Web Developer</TitleH2>
         <TitleH1>Bruno Ponce</TitleH1>
         <Parrafo>Creador de paginas web</Parrafo>
+        <RedesSocial>
+          <a href="">
+          <FaFacebookF/>
+          </a>
+          <a href="mailto:"></a>
+        </RedesSocial>
     </ContainerText>
   )
 }
@@ -16,12 +23,13 @@ const ContainerText = styled.div`
     display: flex;
     width: 100%;
     gap: 4px;
+
     flex-direction: column;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     background-color: transparent;
       @media screen and (max-width: 700px) {
-   
+   text-align: center;
    }
    
 `;
@@ -37,7 +45,7 @@ const TitleH2 = styled.h2`
     `;
 const TitleH1 = styled.h1`
   font-family: ${({ theme }) => theme.fonts. special};
-   font-size: 2.3em;
+   font-size: 3em;
    font-weight: bold;
    color: #fff;
      @media screen and (max-width: 700px) {
@@ -47,6 +55,9 @@ const TitleH1 = styled.h1`
    }
 
 `;
+
 const Parrafo = styled.div`
+`;
+const RedesSocial = styled.div`
 
 `;
