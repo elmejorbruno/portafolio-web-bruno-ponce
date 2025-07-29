@@ -4,14 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import { theme } from '../styleGlobal.jsx'
 import { ThemeProvider } from 'styled-components'
-import { BrowserRouter } from 'react-router-dom'
+import {  HashRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>,
 )
