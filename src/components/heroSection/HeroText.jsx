@@ -47,7 +47,7 @@ const TitleH1 = styled.h1`
   font-family: ${({ theme }) => theme.fonts. special};
    font-size: 3em;
    font-weight: bold;
-   color: #fff;
+   color: #000;
      @media screen and (max-width: 700px) {
    
     font-size: 2em;

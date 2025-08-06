@@ -1,6 +1,6 @@
 {
-  "homepage": " https://lunaesc.github.io/portafolio-web/",
-  "name": "portafoli",
+  "homepage": " https://lunaesc.github.io/portafolio-web-bruno-ponce",
+  "name": "portafolio-web-bruno-ponce",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+  "deploy": "gh-pages -d dist"
 
   },
   "dependencies": {

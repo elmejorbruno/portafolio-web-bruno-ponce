@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import HeroText from "./HeroText";
-import HeroGradient from "./HeroGradient";
-import HeroPic from "./HeroPic";
+import HeroPic from "../heroSection/HeroPic";
 
 const HeroMain = () => {
   return (
@@ -25,14 +24,15 @@ export default HeroMain
 
 const ContainerHeroMain = styled.div`
 margin-top: 4rem;
-background-color: #09243c;
+/* background-color: #09243c; */
+background-color: #fff;
   /* width: 100%;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center; */
   z-index: 10;
- overflow: hidden;
+ 
   
   @media screen and (max-width: 700px) {
     /* flex-direction: column;
@@ -42,7 +42,7 @@ background-color: #09243c;
     background-color: gray;
      width: 50%;
   height: 80vh; */
-  overflow: hidden;
+ 
   height: 60vh
    }
     

@@ -1,16 +1,16 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Habilidades = () => {
   return (
-    <ContainerHabili>Habilidades</ContainerHabili>
+    <ContainerHabilidad>Habilidades</ContainerHabilidad>
   )
 }
 
 export default Habilidades
 
-const ContainerHabili = styled.div`
-     width: 100%;
-    background-color: #c1c8d0;
+const ContainerHabilidad = styled.div`
+   width: 100%;
+    background-color: #fff;
     height: 60vh;
     display: flex;
     padding: 30px;

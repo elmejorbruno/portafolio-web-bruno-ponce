@@ -1,28 +1,26 @@
-import './App.css'
-import About from './components/navbar/About'
-import Footer from './components/navbar/Footer'
-import Habilidades from './components/navbar/Habilidades'
-import HeroMain from './components/navbar/heroSection/HeroMain'
-import NavbarMain from './components/navbar/NavbarMain'
-import Proyectos from './components/navbar/Proyectos'
+import "./App.css";
+import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
+import Footer from "./components/Footer";
+import HeroMain from "./components/heroSection/HeroMain";
+import NavbarMain from "./components/navbar/NavbarMain";
+
+import Habilidades from "./pages/Habilidades";
+import Proyectos from "./pages/Proyecto";
 
 
 function App() {
-
   return (
     <>
-    <main>
-      <NavbarMain/>
-      <HeroMain/>
-      <About/>
-
-      <Habilidades/>
-      <Proyectos/>
-      <Footer/>
-    </main>
-     
+      <main>
+        <NavbarMain/>
+        <HeroMain />
+        <AboutMeMain />
+        <Habilidades/>
+        <Proyectos/>
+        <Footer />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

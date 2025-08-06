@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/portafolio-web/',
   plugins: [react()],
-  build:{ 
-    outDir: 'build'
-  },
+  // build:{ 
+    //   outDir: 'build'
+    // },
+    base:'https://elmejotbruno.github.io/portafolio-web-bruno-ponce',
 })
