@@ -55,7 +55,7 @@ const NavWrapper = styled.div`
 
   padding: 20px 40px;
   @media screen and (min-width: 824px) {
-    background-color: rgba(0, 255, 255, 0.3);
+    background-color: #056a5e;
   }
 `;
 
@@ -107,7 +107,7 @@ const MenuMobileWrapper = styled.div`
   left: 50%;
   transform: translateX(-50%);
   display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
-  background-color: rgba(0, 255, 255, 0.3);
+  background-color: rgba(28, 91, 91, 0.3);
   backdrop-filter: blur(16px);
   width: 100%;
   padding: 0.5rem 0;

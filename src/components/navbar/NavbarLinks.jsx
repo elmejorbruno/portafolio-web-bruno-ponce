@@ -44,7 +44,7 @@ display: flex;
 flex-direction: ${({ menuMobile }) => (menuMobile ? "column" : "row")};
   gap: 2rem;
   list-style: none;
-  color: #000;
+  color: #fff;
 `;
 
 const LinkLi = styled.li`
@@ -52,7 +52,7 @@ const LinkLi = styled.li`
   font-size: 1rem;
  position: relative;
   display: inline-block;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   transition: color 0.3s ease;
   text-transform: uppercase;
@@ -68,10 +68,15 @@ const LinkLi = styled.li`
     bottom: -2px;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
-    width: 100%;
+    width: 40%;
     height: 2px;
     background-color: ${({ theme }) => theme.colors.cyan};
     transition: transform 0.3s ease;
+  }
+    @media (max-width: 640px) {
+    width: 100%;
+  
+    
   }
 
   &:hover::after {
@@ -81,7 +86,7 @@ const LinkLi = styled.li`
 `;
 const Enlace = styled(Link)`
     text-decoration: none;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
 
   &:hover {
