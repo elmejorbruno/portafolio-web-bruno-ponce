@@ -35,7 +35,7 @@ const ContainerText = styled.div`
 `;
 
 const TitleH2 = styled.h2`
-    color: ${({ theme }) => theme.colors.cyan};
+    color: ${({ theme }) => theme.colors.predeter};
     font-size: 2em;
     text-transform: uppercase;
       @media screen and (max-width: 700px) {
