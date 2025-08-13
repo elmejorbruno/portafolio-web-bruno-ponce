@@ -37,7 +37,7 @@ const AboutTitle = styled.div`
   font-size: 2.2em;
   font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
-  color: blue;
+  color: #056a5e;
    @media (max-width: 640px) { 
     font-size: 1.7em;
   }
@@ -45,4 +45,5 @@ const AboutTitle = styled.div`
 
 const ParrafoAbout = styled.div`
   text-align: justify;
+  font-family: ${({ theme }) => theme.fonts.special};
 `;

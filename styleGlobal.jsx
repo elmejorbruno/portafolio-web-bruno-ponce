@@ -13,6 +13,7 @@ export const theme = {
     grey: '#62506c',
     lightGrey: '#978b85',
     darkGrey: '#3f4141',
+    predeter:'#056a5e',
   },
   extends: {
     cyanShadow: '0px 0px 20px 0px rgba(94, 206, 220, 0.5)'
