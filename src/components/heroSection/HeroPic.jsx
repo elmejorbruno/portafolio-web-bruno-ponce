@@ -17,9 +17,10 @@ const ContainerImg = styled.div`
 width: 70%;
 height: 20rem;
 /* background-color: rgba(0, 162, 255, 0.3); */
- background-color: rgba(0, 255, 255, 0.2);
+ background-color: rgba(5, 106, 94, 0.7);
   backdrop-filter: blur(16px);
 border-radius: 100%;
+position: relative;
 overflow:hidden;
     @media screen and (max-width: 700px) {
     width: 70%;
@@ -28,8 +29,9 @@ overflow:hidden;
 
 `;
 const WrapperImagen = styled.div`
+position: absolute;
   width: 100%;
-  height: 10vh;
+  height: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
