@@ -30,6 +30,7 @@ const ContainerText = styled.div`
     background-color: transparent;
       @media screen and (max-width: 700px) {
    text-align: center;
+   prueba
    }
    
 `;
