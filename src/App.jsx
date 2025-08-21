@@ -3,9 +3,10 @@ import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import Footer from "./components/Footer";
 import HeroMain from "./components/heroSection/HeroMain";
 import NavbarMain from "./components/navbar/NavbarMain";
+import Habilidades from "./pages/Habilidades/Habilidades";
 
-import Habilidades from "./pages/Habilidades";
-import Proyectos from "./pages/Proyecto";
+
+import Proyectos from "./pages/proyectos/Proyecto";
 
 
 function App() {
