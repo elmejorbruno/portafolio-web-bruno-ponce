@@ -4,7 +4,7 @@ import styled from "styled-components";
 const NavbarBtn = () => {
   return (
     <NavBtn > 
-      Hire Me
+      <Botton><a href="">Contacto</a></Botton>
       <LuArrowDownRight/>
     </NavBtn>
   )
@@ -27,8 +27,8 @@ const NavBtn = styled.div`
   
 background: linear-gradient(
     to right,
-    ${({ theme }) => theme.colors.cyan},
-    ${({ theme }) => theme.colors.orange}
+    ${({ theme }) => theme.colors.grey},
+    ${({ theme }) => theme.colors.black}
   );
   transition: transform 0.3 ease;
 
@@ -36,5 +36,17 @@ background: linear-gradient(
     transform: scale(1.1);
     box-shadow: ${({theme }) => theme.extends.cyanShadow };
   }
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 
 `;
+ const Botton= styled.div`
+
+ a{
+   list-style: none;
+  text-decoration: none;
+  color: #fff;
+ }
+ 
+    `;

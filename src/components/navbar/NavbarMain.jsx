@@ -17,6 +17,7 @@ const NavbarMain = () => {
         <MenuMobileWrapper menuOpen={menuOpen}>
           <NavbarLinks menuMobile={menuOpen} />
         </MenuMobileWrapper>
+        <NavbarBtn />
         {/* <ContainerLink menuOpen={menuOpen}>
 
             <NavbarLinks/>
@@ -38,7 +39,12 @@ const ContainerNav = styled.nav`
   position: fixed;
   top: 0;
   gap: 4px;
-  z-index: 100;
+  z-index: 100; 
+   background: linear-gradient(
+    to left,
+    ${({ theme }) => theme.colors.grey},
+    ${({ theme }) => theme.colors.black}
+  );
   @media screen and (max-width: 824px) {
     display: flex;
     justify-content: space-between;
@@ -46,16 +52,17 @@ const ContainerNav = styled.nav`
 `;
 
 const NavWrapper = styled.div`
-  background-color: transparent;
-
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
+width: 100%;
+display: flex;
+justify-content: space-between;
+text-align: center;
+align-items: center;
 
   padding: 20px 40px;
   @media screen and (min-width: 824px) {
-    background-color: #056a5e;
+    /* background-color: #056a5e; */
+  
+  border-bottom: 1px solid cyan;
   }
 `;
 
@@ -73,6 +80,7 @@ const ContenIconMenu = styled.div`
   }
 `;
 const ButtoMenu = styled.button`
+background-color: blue;
   background-color: transparent;
   color: #000;
   border: 1px solid #fff;
@@ -83,7 +91,12 @@ const ButtoMenu = styled.button`
   text-align: center;
   display: flex;
   box-shadow: 0px 1px 10px rgba(206, 208, 178, 0.5);
+  @media screen and (max-width: 700px) {
+    padding: 10px;
+    font-size: 20px;
+  }
 `;
+
 
 // const ContainerLink = styled.div`
 

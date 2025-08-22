@@ -3,22 +3,19 @@ import styled from "styled-components"
 
 const Links = [
   {
-    link: "About Me", 
+    link: "#About Me", 
     section: 'Sobre mi' 
   },
   {
-   link: "Skills",
+   link: "#Skills",
    section: 'Habilidades' 
   },
-
+  
   {
-    link: "Projects", 
+    link: "#Projects", 
     section: 'Proyectos' 
   },
-  {
-    link: "Contact", 
-    section: 'Contacto' 
-  },
+ 
   
 ]
 
@@ -33,6 +30,7 @@ const NavbarLinks = ({menuMobile}) => {
           </Enlace>
         </LinkLi>
       ))}
+      
     </LinkUl>
   )
 }
@@ -86,10 +84,11 @@ const LinkLi = styled.li`
 `;
 const Enlace = styled(Link)`
     text-decoration: none;
-  color: ${({ theme }) => theme.colors.white};
-  cursor: pointer;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.cyan};
-  }
-`;
+    color: ${({ theme }) => theme.colors.white};
+    cursor: pointer;
+    
+    &:hover {
+      color: ${({ theme }) => theme.colors.cyan};
+    }
+    `;
+   
