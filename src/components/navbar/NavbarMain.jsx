@@ -3,13 +3,30 @@ import NavbarBtn from "./NavbarBtn";
 import NavbarLinks from "./NavbarLinks";
 import NavbarLogin from "./NavbarLogin";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { IoMdClose } from "react-icons/io";
+
 
 const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
+
+   // Cierra el menú al cambiar a escritorio
+   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 760) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <ContainerNav>
       <NavWrapper>
@@ -25,7 +42,7 @@ const NavbarMain = () => {
       </NavWrapper>
       <ContenIconMenu>
         <ButtoMenu onClick={toggleMenu}>
-          <GiHamburgerMenu />
+          {menuOpen ? <IoMdClose/> : <GiHamburgerMenu /> }
         </ButtoMenu>
       </ContenIconMenu>
     </ContainerNav>
@@ -42,7 +59,7 @@ const ContainerNav = styled.nav`
   z-index: 100; 
    background: linear-gradient(
     to left,
-    ${({ theme }) => theme.colors.grey},
+    ${({ theme }) => theme.colors.cyan},
     ${({ theme }) => theme.colors.black}
   );
   @media screen and (max-width: 824px) {
@@ -73,7 +90,7 @@ const ContenIconMenu = styled.div`
   padding: 24px;
   margin-right: 20px;
   border-radius: 9999px;
-
+  z-index: 100;
   color: #fff;
   @media screen and (min-width: 824px) {
     display: none;
@@ -113,19 +130,21 @@ background-color: blue;
 // `;
 
 const MenuMobileWrapper = styled.div`
-  text-align: center;
+  text-align: left;
   flex-direction: column;
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 70px;
+  right: 0;
+  left: 20rem;
   transform: translateX(-50%);
   display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
-  background-color: rgba(28, 91, 91, 0.3);
-  backdrop-filter: blur(16px);
-  width: 100%;
-  padding: 0.5rem 0;
+  background-color: rgba(32, 101, 101, 0.7);
+  backdrop-filter: blur(10px);
+  width:  50%;
+ 
+  padding: 3rem 3rem;
   font-size: 1.25em;
-  z-index: 80;
+ 
   @media (min-width: 824px) {
     position: relative;
     display: flex !important;
