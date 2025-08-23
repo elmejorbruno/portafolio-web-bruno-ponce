@@ -20,6 +20,6 @@ export const theme = {
   },
   fonts: {
     body: "'Josefin Sans', sans-serif",
-    special: "'Roboto', sans-serif",
+    special: "'Inter', sans-serif",
   }
 };

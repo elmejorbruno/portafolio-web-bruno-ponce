@@ -1,21 +1,33 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import styled from "styled-components";
+import PortafolioWeb from "../../assets/img/img-portaforlio.png";
+import TecnohumanitiWeb from "../../assets/img/tecnohumaniti-web.png";
+import TecnohumanitiBlog from "../../assets/img/tecnohumaniti-web-blog.png";
+import ImgWebRedes from "../../assets/img/img-web-redes-sociales.png";
 
 const dataProyectos = [
   {
     titulo: "Portfolio Web",
     descripcion: "Sitio personal para mostrar mis habilidades y proyectos. Desarrollado con React y Styled Components.",
-    imagen: "/img/portfolio.png",
-    demo: "https://miportfolio.com",
-    codigo: "https://github.com/usuario/portfolio"
+    imagen: PortafolioWeb,
+    demo: "https://github.com/usuario/portfolio",
+    codigo: "https://elmejorbruno.github.io/portafolio-web-bruno-ponce/"
   },
   {
-    titulo: "App de Tareas",
+    titulo: "Redes sociales",
     descripcion: "Aplicación para gestionar tareas diarias con almacenamiento local y diseño responsive.",
-    imagen: "/img/todoapp.png",
-    demo: "https://todoapp.com",
-    codigo: "https://github.com/usuario/todoapp"
+    imagen: ImgWebRedes,
+    demo: "https://elmejorbruno.github.io/plataformas-redes/",
+    codigo: "https://github.com/elmejorbruno/plataformas-redes.git"
+  },
+   {
+    titulo: "Tecnohumaniti",
+    descripcion: "Pagina web y blog personal, enfocado en tecnología y humanidades.",
+    imagen: TecnohumanitiWeb,
+    demo: "https://www.tecnohumaniti.com/",
+    codigo: "https://elmejorbruno.github.io/plataformas-redes/"
   }
+  
 ];
 const ProyectoCard = () => {
   return (
@@ -24,8 +36,8 @@ const ProyectoCard = () => {
         <GridProyectos>
             {dataProyectos.map((project, index) => (
                 <Card key={index}>
-                    <imagen src={project.imagen} alt={project.alt}/>
                     <CardContent>
+                    <Imagen src={project.imagen} alt={project.alt} />
                         <Title>{project.titulo}</Title>
                         <descripcion>{project.descripcion}</descripcion>
                         <Links>
@@ -75,8 +87,13 @@ const ProjectTitle = styled.div`
 `;
 
 const GridProyectos = styled.div``;
-// const  = styled.div``;
 const Card = styled.div``;
+const Imagen = styled.img`
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+`;
+// const  = styled.div``;
 const CardContent = styled.div``;
 const Title = styled.div``;
 const Links = styled.div``;
