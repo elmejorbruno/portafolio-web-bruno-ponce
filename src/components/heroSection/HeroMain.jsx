@@ -82,15 +82,16 @@ const ContainerText = styled.div`
 
 const ContainerPicture = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   height: 30vh;
  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   right:5px;
   @media screen and (min-width: 700px) {
     width: 60%;
     height: 50vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
    }
 `;

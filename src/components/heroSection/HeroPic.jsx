@@ -4,9 +4,11 @@ import ImgbrunoPonce from "../../assets/img/bruno-ponces.png"
 const HeroPic = () => {
   return (
     <ContainerImg>
+      <CirculoFondo>   </CirculoFondo>
       <WrapperImagen>
         <img src={ImgbrunoPonce} alt="" />
       </WrapperImagen>
+   
       </ContainerImg>
   )
 }
@@ -14,37 +16,55 @@ const HeroPic = () => {
 export default HeroPic
 
 const ContainerImg = styled.div`
-width: 70%;
-height: 20rem;
-/* background-color: rgba(0, 162, 255, 0.3); */
- background-color: rgba(5, 106, 94, 0.7);
+  width: 70%;
+  height: 20rem;
+  /* background-color: rgba(0, 162, 255, 0.1); */
   backdrop-filter: blur(16px);
-border-radius: 100%;
-position: relative;
-overflow:hidden;
-    @media screen and (max-width: 700px) {
-    width: 70%;
-    
-   }
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+
+      @media screen and (max-width: 700px) {
+      width: 40%;
+      height: 10rem;
+    }
+
 
 `;
-const WrapperImagen = styled.div`
+const CirculoFondo = styled.div`
+  background: linear-gradient(
+    to bottom ,
+    ${({ theme }) => theme.colors.cyan},
+    ${({ theme }) => theme.colors.black}
+  );
 position: absolute;
+top: 4rem;
+  border-radius: 100%;
   width: 100%;
-  height: 1vh;
+  height: 50vh;
+  
+`;
+
+const WrapperImagen = styled.div`
+    position: absolute;
+    top: -30px;
+  width: 100%;
+  height: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   margin:15rem 0 0 0;
- 
+    @media screen and (max-width: 700px) {
+    width: 85%;
+    
+   }
 
   img{
-    
+
     width: 100%;
-    max-width: 400px;
-     display: block;
-    object-fit: cover;
+    max-width: 500px;
+     
       @media screen and (max-width: 700px) {
     width: 85%;
     
