@@ -21,9 +21,8 @@ const ContainerAbout = styled.div`
   justify-content:center;
   gap: 12px;
   max-width: 1200px;
-  padding: 30px;
+  padding:0 30px;
   text-align: justify;
- 
   @media (min-width: 768px) {
     flex-direction: row;
     

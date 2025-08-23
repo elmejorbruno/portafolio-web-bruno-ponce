@@ -19,7 +19,6 @@ const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 40px;
   padding: 10px;
 
   @media (min-width: 768px) { 
