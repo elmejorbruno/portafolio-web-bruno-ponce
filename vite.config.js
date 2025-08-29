@@ -7,5 +7,5 @@ export default defineConfig({
   // build:{ 
     //   outDir: 'build'
     // },
-    base:'https://elmejotbruno.github.io/portafolio-web-bruno-ponce',
-})
+    base:'/portafolio-web-bruno-ponce/',
+  })
