@@ -41,9 +41,6 @@ background-color: transparent;
     justify-content: center;
   
      width: 100%;
-  
- 
-  
    }
     
 `;
