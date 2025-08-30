@@ -1,5 +1,4 @@
 {
-  "homepage": " https://lunaesc.github.io/portafolio-web-bruno-ponce",
   "name": "portafolio-web-bruno-ponce",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
