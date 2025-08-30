@@ -35,12 +35,12 @@ background-color: transparent;
  
   
   @media screen and (max-width: 700px) {
-    flex-direction: column;
+    /* flex-direction: column;
     display: flex;
     align-items: stretch;
     justify-content: center;
   
-     width: 100%;
+     width: 100%; */
    }
     
 `;
