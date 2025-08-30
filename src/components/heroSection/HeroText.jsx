@@ -6,9 +6,9 @@ import styled from "styled-components"
 const HeroText = () => {
   return (
     <ContainerText>
-        <TitleH2>Front-End Web Developer</TitleH2>
+        <TitleH2>  Desarrollador Web Front-End</TitleH2>
         <TitleH1>Bruno Ponce</TitleH1>
-        <Parrafo>Creador de paginas web</Parrafo>
+        <Parrafo>Creador de páginas web</Parrafo>
         <RedesSocial>
           <ContactRedes>
             Contacto
@@ -42,7 +42,7 @@ const ContainerText = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: transparent;
+    background-color:transparent;
       @media screen and (max-width: 700px) {
    text-align: center;
    
@@ -52,10 +52,10 @@ const ContainerText = styled.div`
 
 const TitleH2 = styled.h2`
     color: ${({ theme }) => theme.colors.predeter};
-    font-size: 2em;
+    font-size: 3em;
     text-transform: uppercase;
       @media screen and (max-width: 700px) {
-        font-size: 1em;
+        font-size: 1.5em;
 
    }
     `;
@@ -73,6 +73,7 @@ const TitleH1 = styled.h1`
 `;
 
 const Parrafo = styled.div`
+ 
 `;
 const RedesSocial = styled.div`
   display: flex;
@@ -80,6 +81,7 @@ const RedesSocial = styled.div`
   justify-content: center;
   align-items: center;
     margin: 10px 0;
+    background-color: transparent;
   
 `;
 
@@ -102,6 +104,11 @@ const  RedesLinks = styled(Link)`
       }
       border-radius: 50px;
       padding: 10px;
+      @media screen and (max-width: 700px) {
+   
+    font-size: .5em;
+
+   }
     }
 `;
 

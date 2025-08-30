@@ -4,10 +4,10 @@ import ImgbrunoPonce from "../../assets/img/bruno-ponces.png"
 const HeroPic = () => {
   return (
     <ContainerImg>
-      <CirculoFondo>   </CirculoFondo>
-      <WrapperImagen>
+      <WrapperImagen >
         <img src={ImgbrunoPonce} alt="" />
       </WrapperImagen>
+      {/* <CirculoFondo>   </CirculoFondo> */}
    
       </ContainerImg>
   )
@@ -16,59 +16,72 @@ const HeroPic = () => {
 export default HeroPic
 
 const ContainerImg = styled.div`
-  width: 70%;
+  width: 100%;
   height: 20rem;
-  /* background-color: rgba(0, 162, 255, 0.1); */
+  background-color: transparent;
   backdrop-filter: blur(16px);
-  border-radius: 100%;
+
   position: relative;
-  overflow: hidden;
+  
 
       @media screen and (max-width: 700px) {
       width: 40%;
       height: 10rem;
+     
     }
 
 
 `;
-const CirculoFondo = styled.div`
-  background: linear-gradient(
-    to bottom ,
-    ${({ theme }) => theme.colors.cyan},
-    ${({ theme }) => theme.colors.black}
-  );
-position: absolute;
-top: 4rem;
-  border-radius: 100%;
-  width: 100%;
-  height: 50vh;
+// const CirculoFondo = styled.div`
+
+ 
+// position: absolute;
+// top: 5rem;
+//  background-color: #00ffff;
+//   width: 100%;
+//   height: 50vh;
   
-`;
+// `;
 
 const WrapperImagen = styled.div`
-    position: absolute;
-    top: -30px;
+position: relative;
+
   width: 100%;
-  height: 0.2rem;
+  height: 20rem;
+
+background: linear-gradient(
+  to bottom,
+  rgba(113, 63, 160, 0.1) 0%,   /* cyan muy transparente en la parte de arriba */
+  ${({ theme }) => theme.colors.cyan} 25%, /* cyan sólido más abajo */
+  ${({ theme }) => theme.colors.black} 100% /* termina en negro */
+);
+
+ 
+ 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  margin:15rem 0 0 0;
-    @media screen and (max-width: 700px) {
-    width: 85%;
-    
-   }
-
-  img{
-
-    width: 100%;
-    max-width: 500px;
-     
-      @media screen and (max-width: 700px) {
-    width: 85%;
-    
-   }
-  }
+  border-radius: 90%;
   
+  
+  max-width: 480px;
+
+  overflow: hidden;
+  @media screen and (max-width: 700px) {
+    width: 85%;
+    border-radius: 300px;
+    height: 10rem;
+  }
+
+  img {
+    position: absolute;
+    top: -1rem;
+    width: 100%;
+    max-width: 600px;
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+        top: 1rem;
+    }
+  }
 `;
