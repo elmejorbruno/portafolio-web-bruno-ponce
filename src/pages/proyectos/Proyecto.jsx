@@ -12,7 +12,7 @@ const Proyectos = () => {
 
 export default Proyectos
 
-const ContainerAbout = styled.div`
+const ContainerAbout = styled.section`
   display: flex;
   justify-content:center;
   gap: 12px;
