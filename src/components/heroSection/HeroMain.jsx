@@ -15,7 +15,11 @@ const HeroMain = () => {
 
         <HeroPic/>  
         </ContainerPicture>
+      
         </WrapperHero>
+          <BtnDescargaCv>
+          <a href="">Descarga CV</a>
+        </BtnDescargaCv>
     </ContainerHeroMain>
   )
 }
@@ -23,77 +27,114 @@ const HeroMain = () => {
 export default HeroMain
 
 const ContainerHeroMain = styled.div`
-margin-top: 4rem;
+margin-top: 6rem;
 /* background-color: #09243c; */
 background-color: transparent;
    width: 100%;
-  height: 80vh;
+  height: 70vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center; 
   z-index: 10;
  
   
   @media screen and (max-width: 700px) {
-    /* flex-direction: column;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+    margin-top: 7rem;
   
-     width: 100%; */
+     width: 100%; 
    }
     
 `;
 const WrapperHero = styled.div`
- display: flex;
- width: 100%;
-
- margin: 20px 0;
- justify-content: space-between;
  align-items: center;
- position: relative;
- background-color: transparent;
- flex-direction: column;
-
+justify-content: center;
+ 
  
  @media screen and (min-width: 700px) {
-    max-width: 1200px;
+   justify-content: space-between;
+     max-width: 1200px;
     width: 70%;
-    height: 50vh;
-    margin: 20rem 0;
+    height: 55vh;
+   /* margin: 20rem 0;*/
     padding: 2rem;
     display: flex;
-   flex-direction: row;
   
-  }
+  
+  } 
+    @media screen and (max-width: 1000px) {
+    width: 100%;
+   
+  } 
+    @media screen and (max-width: 700px) {
+    width: 90%;
+    flex-direction: row;
+   
+  } 
 `;
 
 const ContainerText = styled.div`
-  width: 80%;
-  display: flex;
+flex: 1;
+ width: 80%;
+ background-color: transparent;
+ /*   display: flex;
  padding: 30px;
  background-color: transparent;
+*/
   @media screen and (max-width: 700px) {
     width: 100%;
-   padding: 10px 30px;
+   padding:  30px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } 
 `;
 
 const ContainerPicture = styled.div`
+
+display: flex;
+align-items: center;
+justify-content: center;
+@media screen and (min-width: 700px) {
   width: 100%;
-  max-width: 700px;
-  height: 30vh;
- background-color:transparent;
+  
+  
+}
+@media screen and (max-width: 1200px) {
+  width: 100%;
+  
+}  /* */
+
+
+`;
+const BtnDescargaCv = styled.div`
+
+  width: 100%;
+  height: 13vh;
    display: flex;
-  justify-content: center;
-  align-items: center;
-  right:5px;
-  @media screen and (min-width: 700px) {
-    width: 100%;
-    height: 100vh;
-   
-   }
+   align-items: center;
+   justify-content: center;
+
+  a{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .6rem;
+    background: linear-gradient(
+    to right,
+    ${({ theme }) => theme.colors.grey},
+    ${({ theme }) => theme.colors.black}
+  );
+  border: 1px solid cyan;
+  border-radius: 20px;
+
+  &:hover{
+     background: linear-gradient(
+    to left,
+    ${({ theme }) => theme.colors.cyan},
+    ${({ theme }) => theme.colors.black}
+  );
+  }
+  } 
 `;

@@ -5,14 +5,20 @@ const HabilidadesCard = () => {
   return (
     <ContainerCard>
       <Title>Habilidades</Title>
-        <GridHabilidades>
+         <CardContent> 
+          <GridHabilidades>
             {dataHabilidades.map((hab, index) => (
-                <Card key={index}>
+                
+                  <Card key={index}>
+                
                    <Icon>{hab.icono}</Icon> 
                     <Nombre>{hab.nombre}</Nombre>
+                
                 </Card>
+               
             ))}
-        </GridHabilidades>
+        </GridHabilidades> 
+        </CardContent>
     </ContainerCard>
   )
 }
@@ -20,30 +26,38 @@ const HabilidadesCard = () => {
 export default HabilidadesCard
 
 const ContainerCard = styled.div`
-    background-color: transparent;
+       background-color: transparent;
     @media (min-width: 480px){
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    }
+  @media (min-width: 768px) { 
+    align-items: start;
+    text-align: center;
+  }
+  @media (max-width: 640px) { 
+    align-items: center;
+   
+  }
   
 `;
 
-const Title = styled.div`
-  padding: 30px 0;
+const Title = styled.h2`
+   padding: 30px 0;
   font-size: 2.2em;
   font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
   color: #056a5e;
    @media (max-width: 640px) { 
-   
     font-size: 1.7em;
   }
 `;
 const GridHabilidades = styled.div`
 width: 100%;
     background-color: transparent;
+  
 @media (min-width: 480px){
 
     padding: 10px;
@@ -70,7 +84,10 @@ const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+    border-left: 5px solid cyan;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
 @media (min-width: 480px){
    width: 100%;
    gap: 10px;
@@ -82,11 +99,17 @@ const Card = styled.div`
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
     
   } 
 `;
+const CardContent = styled.div`
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 21px;
+`;
 const Icon = styled.div`
     padding: 10px;
     width: 100%;
@@ -103,6 +126,8 @@ const Icon = styled.div`
     font-size: 2.5rem;
   }
 `;
+
+
 const Nombre = styled.p`
   margin-top: 10px;
   font-weight: 500;

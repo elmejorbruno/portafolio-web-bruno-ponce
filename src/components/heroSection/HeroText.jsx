@@ -42,7 +42,7 @@ const ContainerText = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color:red;
+   
       @media screen and (max-width: 700px) {
    text-align: center;
    

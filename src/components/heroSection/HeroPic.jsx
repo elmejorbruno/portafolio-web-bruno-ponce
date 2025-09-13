@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import ImgbrunoPonce from "../../assets/img/bruno-ponces.png"
+import ImgbrunoPonce from "../../assets/img/bruno-ponces-img-pequena.png"
 
 const HeroPic = () => {
   return (
@@ -16,18 +16,21 @@ const HeroPic = () => {
 export default HeroPic
 
 const ContainerImg = styled.div`
-  width: 100%;
-  height: 20rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
+ width: 100%;
+   /* height: 20rem;
   background-color: transparent;
   backdrop-filter: blur(16px);
 
-  position: relative;
+  position: relative; */
   
 
       @media screen and (max-width: 700px) {
-      width: 40%;
+      width: 100%;
       height: 10rem;
-     
     }
 
 
@@ -44,16 +47,37 @@ const ContainerImg = styled.div`
 // `;
 
 const WrapperImagen = styled.div`
-position: relative;
+
+img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #0e5c5c;
+  box-shadow:  0 0 25px rgba(108, 99, 255, .5);
+  transition: all .3s;
+    
+background: linear-gradient(
+    to top,
+    ${({ theme }) => theme.colors.grey},
+    ${({ theme }) => theme.colors.black}
+  );
+    @media screen and (max-width: 700px) {
+    width: 200px;
+    height: 200px;
+   
+  } 
+}
+/* position: relative;
 
   width: 100%;
   height: 20rem;
 
 background: linear-gradient(
   to bottom,
-  rgba(113, 63, 160, 0.1) 0%,   /* cyan muy transparente en la parte de arriba */
-  ${({ theme }) => theme.colors.cyan} 25%, /* cyan sólido más abajo */
-  ${({ theme }) => theme.colors.black} 100% /* termina en negro */
+  rgba(113, 63, 160, 0.1) 0%,   
+  ${({ theme }) => theme.colors.cyan} 25%, 
+  ${({ theme }) => theme.colors.black} 100% 
 );
 
  
@@ -83,5 +107,5 @@ background: linear-gradient(
       width: 100%;
         top: 1rem;
     }
-  }
+  } */
 `;
