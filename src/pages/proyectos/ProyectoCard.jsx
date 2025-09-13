@@ -43,16 +43,16 @@ const dataProyectos = [
 ];
 const ProyectoCard = () => {
   return (
-     <ContainerCard>
+     <ContainerSection>
       <ProjectTitle>Proyectos</ProjectTitle>
-        <GridProyectos>
+        <GridGaleria>
             {dataProyectos.map((project, index) => (
                 <Card key={index}>
-                    <CardContent>
-                           <ContainerImg>
+                    <CardProject>
+                           {/* <ContainerImg> */}
                         <Imagen src={project.img} alt={project.alt} />
-                      </ContainerImg>
-
+                      {/* </ContainerImg> */}
+                      <OverlayProject>
                         <Title>{project.titulo}</Title>
                         <descripcion>{project.descripcion}</descripcion>
                          
@@ -67,19 +67,21 @@ const ProyectoCard = () => {
                             <FaExternalLinkAlt/> Demo
                         </a>
                         </Links>
-
-                    </CardContent>
+                    </OverlayProject>
+                    </CardProject>
                 </Card>
             ))}
-        </GridProyectos>
-    </ContainerCard>
+        </GridGaleria>
+    </ContainerSection>
   )
 }
 
 export default ProyectoCard
 
-const ContainerCard = styled.div`
- 
+const ContainerSection = styled.div`
+  max-width: 1100px;
+  margin: auto;
+/*  
      background-color: transparent;
     @media (min-width: 480px){
     display: flex;
@@ -94,7 +96,7 @@ const ContainerCard = styled.div`
   @media (max-width: 640px) { 
     align-items: center;
    
-  }
+  } */
 `;
 
 const ProjectTitle = styled.h2`
@@ -108,8 +110,11 @@ const ProjectTitle = styled.h2`
   }
 `;
 
-const GridProyectos = styled.div`
-      background-color: transparent;
+const GridGaleria = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+      /* background-color: transparent;
 @media (min-width: 480px){
 
     padding: 10px;
@@ -125,19 +130,19 @@ const GridProyectos = styled.div`
     grid-template-columns: repeat(2,1fr);
     gap: 15px;
     
-}
+} */
 `;
 const Card = styled.div`
-   width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 20px;
-    text-align: center;
-    padding: 10px;
-     box-shadow: 5px 3px 22px rgba(9, 97, 14, 0.4);
+  /* width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 5px 3px 22px rgba(9, 97, 14, 0.4);
 
     @media (min-width: 480px){
       width: 100%;
@@ -153,28 +158,63 @@ const Card = styled.div`
     transform: translateY(-5px);
     box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
     
-  } 
+  }  */
 `;
-const CardContent = styled.div`
-  display: flex;
+const CardProject = styled.div`
+  position: relative;
+  max-width: 350px;
+  height: fit-content;
+  margin: 20px;
+  cursor: pointer;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  gap: 21px;
+  gap: 21px; */
 `;
-const ContainerImg = styled.div`
+
+
+const OverlayProject = styled.div`
+  position: absolute;
+  top: 0;
   width: 100%;
-  border-radius: 8ox;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(10, 128, 104, 0.8), rgba(28, 182, 152, .8));
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0;
+
+  &:hover{
+    opacity: 1;
+  }
+`;
+
+const ContainerImg = styled.div`
+  /* width: 100%;
+  border-radius: 8px; */
   
 `;
 const Imagen = styled.img`
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  display: block;
+  /* height: auto;
+  object-fit: cover; */
 `;
 // const  = styled.div``;
 
-const Title = styled.div``;
+const Title = styled.h3`
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transition: 1s;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #fff;
+`;
 
 const ProjectTech = styled.div`
 
