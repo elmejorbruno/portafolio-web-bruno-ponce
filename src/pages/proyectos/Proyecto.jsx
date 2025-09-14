@@ -3,23 +3,23 @@ import ProyectoCard from "./ProyectoCard";
 
 const Proyectos = () => {
   return (
- <ContainerAbout>
-      <ContentAbout>
+ <ContainerProject>
+      <ContentProject>
         <ProyectoCard/>
-      </ContentAbout>
-    </ContainerAbout>  )
+      </ContentProject>
+    </ContainerProject>  )
 }
 
 export default Proyectos
 
-const ContainerAbout = styled.section`
+const ContainerProject = styled.section`
   display: flex;
   justify-content:center;
   gap: 12px;
   max-width: 1200px;
-  padding: 30px;
+ margin-bottom: 5rem;
   text-align: justify;
- 
+
   @media (min-width: 768px) {
     flex-direction: row;
     
@@ -38,8 +38,12 @@ const ContainerAbout = styled.section`
   align-items: center;
   `;
   
-  const ContentAbout = styled.div`
+  const ContentProject = styled.div`
     width: 70%;
    font-size: 1.2em;
    line-height: 1.5;
+   
+   @media (max-width: 1100px) { 
+    width: 90%;
+  }
   `;
