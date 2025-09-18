@@ -3,15 +3,18 @@ import styled from "styled-components"
 
 const Links = [
   {
+    id: "AboutMe",
     link: "#About Me", 
     section: 'Sobre mi' 
   },
   {
+    id: "Skills",
    link: "#Skills",
    section: 'Habilidades' 
   },
   
   {
+    id: "Projects",
     link: "#Projects", 
     section: 'Proyectos' 
   },
@@ -25,7 +28,7 @@ const NavbarLinks = ({menuMobile}) => {
     <LinkUl menuMobile={menuMobile}>
       {Links.map((itemLink, index) => (
         <LinkLi key={index}>
-          <Enlace to={itemLink.link} smooth={true} duration={500}>
+          <Enlace to={itemLink.id} smooth={true} duration={500}>
             {itemLink.section}
           </Enlace>
         </LinkLi>

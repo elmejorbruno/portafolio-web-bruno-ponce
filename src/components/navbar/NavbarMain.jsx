@@ -28,40 +28,46 @@ const NavbarMain = () => {
     };
   }, []);
   return (
-    <ContainerNav>
-      <NavWrapper>
-        <NavbarLogin />
-        <MenuMobileWrapper menuOpen={menuOpen}>
-          <NavbarLinks menuMobile={menuOpen} />
-        </MenuMobileWrapper>
-        <NavbarBtn />
-        {/* <ContainerLink menuOpen={menuOpen}>
+    <HeaderWrapper>
+      <ContainerNav>
+        <NavWrapper>
+          <NavbarLogin />
+          <MenuMobileWrapper menuOpen={menuOpen}>
+            <NavbarLinks menuMobile={menuOpen} />
+          </MenuMobileWrapper>
+          <NavbarBtn />
+          {/* <ContainerLink menuOpen={menuOpen}>
 
-            <NavbarLinks/>
-            </ContainerLink> */}
-      </NavWrapper>
-      <ContenIconMenu>
-        <ButtoMenu onClick={toggleMenu}>
-          {menuOpen ? <IoMdClose/> : <GiHamburgerMenu /> }
-        </ButtoMenu>
-      </ContenIconMenu>
-    </ContainerNav>
+              <NavbarLinks/>
+              </ContainerLink> */}
+        </NavWrapper>
+        <ContenIconMenu>
+          <ButtoMenu onClick={toggleMenu}>
+            {menuOpen ? <IoMdClose/> : <GiHamburgerMenu /> }
+          </ButtoMenu>
+        </ContenIconMenu>
+      </ContainerNav>
+    </HeaderWrapper>
   );
 };
 
 export default NavbarMain;
 
-const ContainerNav = styled.nav`
+const  HeaderWrapper = styled.header`
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
+z-index: 100; 
+`;
+const ContainerNav = styled.nav`
+  
   gap: 4px;
-  z-index: 100; 
    background: linear-gradient(
     to left,
     ${({ theme }) => theme.colors.cyan},
     ${({ theme }) => theme.colors.black}
   );
+
   @media screen and (max-width: 824px) {
     display: flex;
     justify-content: space-between;
