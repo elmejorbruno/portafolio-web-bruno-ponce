@@ -3,7 +3,7 @@ import ProyectoCard from "./ProyectoCard";
 
 const Proyectos = () => {
   return (
- <ContainerProject>
+ <ContainerProject id="Projects">
       <ContentProject>
         <ProyectoCard/>
       </ContentProject>
@@ -39,11 +39,13 @@ const ContainerProject = styled.section`
   `;
   
   const ContentProject = styled.div`
-    width: 70%;
    font-size: 1.2em;
    line-height: 1.5;
-   
-   @media (max-width: 1100px) { 
-    width: 90%;
+   @media (min-width: 1150px) {
+     width: 70%;
+   }
+
+   @media (max-width: 1150px) { 
+    width: 80%;
   }
   `;

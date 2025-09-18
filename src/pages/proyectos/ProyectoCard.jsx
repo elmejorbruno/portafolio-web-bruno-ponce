@@ -12,7 +12,7 @@ const dataProyectos = [
     img: PortafolioWeb,
       tech: "React, vite",
     demo: "https://github.com/usuario/portfolio",
-    codigo: "https://elmejorbruno.github.io/portafolio-web-bruno-ponce/"
+    codigo: "https://github.com/elmejorbruno/portafolio-web-bruno-ponce.git"
   },
   {
     titulo: "Redes sociales",
@@ -35,7 +35,7 @@ const dataProyectos = [
     descripcion: "Blog personal, enfocado en noticias y reflaxiones sobre tecnologias con un enfoque humanista.",
     img: TecnohumanitiBlog,
     tech: "React, vite",
-    demo: "https://www.tecnohumaniti.com/",
+    demo: "https://www.tecnohumaniti.com/main-blog",
     codigo: "https://elmejorbruno.github.io/plataformas-redes/"
   }
   
@@ -62,14 +62,14 @@ const ProyectoCard = () => {
                        
                     </OverlayProject>
                     
-                     <Links>
+                     <LinksBoton>
                         <a href={project.codigo}>
                             <FaGithub/> Código
                         </a>
                         <a href={project.demo}>
                             <FaExternalLinkAlt/> Demo
                         </a>
-                        </Links>
+                        </LinksBoton>
 
                     </CardProject>
                 </Card>
@@ -84,32 +84,18 @@ export default ProyectoCard
 const ContainerSection = styled.div`
   max-width: 1100px;
   margin: auto;
-/*  
-     background-color: transparent;
-    @media (min-width: 480px){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
-  @media (min-width: 768px) { 
-    align-items: start;
-    text-align: center;
-  }
-  @media (max-width: 640px) { 
-    align-items: center;
-   
-  } */
+
 `;
 
 const ProjectTitle = styled.h2`
   padding: 30px 0;
-  font-size: 3em;
+  font-size: 2.2em;
   font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
   color: #056a5e;
    @media (max-width: 640px) { 
     font-size: 1.7em;
+    text-align: center;
   }
 `;
 
@@ -117,64 +103,46 @@ const GridGaleria = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-/* background-color: transparent;
-@media (min-width: 480px){
-    
-padding: 10px;
-background-color: #fff;
-display: grid;
-grid-template-columns: repeat(2,1fr);
-gap: 15px;
-}
-@media (min-width: 680px){
-    width: 100%;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
-    
-    } */
-    `;
-const Card = styled.div`
-/* width: 100%;
-display: block;
-margin-bottom: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-border-radius: 20px;
-text-align: center;
-padding: 10px;
-box-shadow: 5px 3px 22px rgba(9, 97, 14, 0.4);
 
-@media (min-width: 480px){
-    width: 100%;
-    gap: 10px;
-    
+`;
+const Card = styled.div`
+  /* width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 5px 3px 22px rgba(9, 97, 14, 0.4);
+
+    @media (min-width: 480px){
+      width: 100%;
+      gap: 10px;
+      
     }
     
     
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     
     &:hover {
-        border-bottom: 2px solid #09610E;
-        transform: translateY(-5px);
-        box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
-        
-        }  */
-        `;
-        const CardProject = styled.div`
-        background-color: aqua;
+    border-bottom: 2px solid #09610E;
+    transform: translateY(-5px);
+    box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
+    
+  }   */
+`;
+const CardProject = styled.div`
   position: relative;
   max-width: 350px;
   height: fit-content;
   margin: 20px;
   cursor: pointer;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  gap: 21px; */
+   @media (max-width: 400px) {
+  
+  
+  }
 `;
 
 
@@ -183,19 +151,22 @@ const OverlayProject = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(28, 182, 152, .8));
+  text-align: center;
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: center;
   flex-direction: column;
   transition: 1s;
   font-size: 18px;
   letter-spacing: 2px;
   opacity: 1;
   border-radius: 10px;
+  padding: 2rem 1rem;
   &:hover{
     opacity: 0;
+  }  /* */
+    @media (max-width: 500px) {
+     letter-spacing: 1px;
   }
 `;
 
@@ -208,32 +179,48 @@ const Imagen = styled.img`
   width: 100%;
   display: block;
   border-radius: 10px;
-  /* height: auto;
-  object-fit: cover; */
+   height: auto;
+  object-fit: cover;
 `;
-// const  = styled.div``;
+
 
 const Title = styled.h3`
-  margin-bottom: 20px;
   transition: 1s;
   font-size: 2em;
+  height: 15vh;
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: 800;
   color: #fff;
   padding: 0 10px ;
-  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: .4rem;
+   @media (max-width: 500px) {
+     font-size: 1.5em;
+    
+  }
+
 `;
 
 const Descrip = styled.div`
     color: #fff;
-    margin: 5px 20px;
+    margin: 0px 20px;
     text-align: justify;
+    
+    @media (max-width: 600px) {
+      font-size: .9em;
+      text-align: center;
+      line-height: 1.1;
+      margin: 10px;
+    }
 `;
 const ProjectTech = styled.div`
     color: #fff;
     font-size: 1em;
 `;
-const Links = styled.div`
+const LinksBoton = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -263,6 +250,9 @@ const Links = styled.div`
             ${({ theme }) => theme.colors.black}
     );
     }
+     @media (max-width: 600px) {
+    font-size: .9em;
+  }
   }
 
 `;
