@@ -20,7 +20,7 @@ const ContainerText = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 10px;
-
+background-color: transparent;
   @media (min-width: 768px) { 
     align-items: start;
     text-align: center;
@@ -32,13 +32,14 @@ const ContainerText = styled.div`
 `;
 
 const AboutTitle = styled.div`
-  padding: 30px 0;
+  padding: 2rem 0;
   font-size: 2.2em;
   font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
   color: #056a5e;
    @media (max-width: 640px) { 
     font-size: 1.7em;
+    padding: 1rem;
   }
 `;
 

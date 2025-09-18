@@ -4,7 +4,7 @@ import AboutMeText from "./AboutMeText";
 
 const AboutMeMain = () => {
   return (
-    <ContainerAbout>
+    <ContainerAbout id="AboutMe">
       <ContentAbout>
         <AboutMeText/>
 
@@ -16,22 +16,24 @@ const AboutMeMain = () => {
 
 export default AboutMeMain
 
-const ContainerAbout = styled.div`
+const ContainerAbout = styled.section`
   display: flex;
   justify-content:center;
   gap: 12px;
   max-width: 1200px;
-  padding:0 30px;
+ 
   text-align: justify;
+  
   @media (min-width: 768px) {
     flex-direction: row;
-    
+    margin-left: auto;
+    margin-right: auto;
   }
   @media (max-width: 648px) { 
     flex-direction: column; 
+   
   }
-  margin-left: auto;
-  margin-right: auto;
+
   /* gap-12
   px-4 */
   /* max-w[1200px]
@@ -43,6 +45,12 @@ const ContainerAbout = styled.div`
   
   const ContentAbout = styled.div`
     width: 70%;
-   font-size: 1.2em;
-   line-height: 1.5;
+    font-size: 1.2em;
+    line-height: 1.5;
+
+    @media (max-width: 648px) { 
+      font-size: 1em;
+      line-height: 1.3;
+      width: 90%;
+    }
   `;
