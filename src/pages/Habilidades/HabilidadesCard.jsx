@@ -32,6 +32,7 @@ const ContainerCard = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     }
   @media (min-width: 768px) { 
     align-items: start;
@@ -88,14 +89,17 @@ const Card = styled.div`
     border-radius: 20px;
     padding: 10px;
     box-shadow: 10px 3px 22px rgba(0,0,0,0.1);
-@media (min-width: 480px){
-   width: 100%;
-   gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     
-}
-    
+    @media (min-width: 480px){
+      width: 100%;
+      gap: 10px;
+        
+    }
+    @media (max-width: 768px) {
+      box-shadow: 10px 3px 22px ;
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
 
   &:hover {
     transform: translateY(-5px);

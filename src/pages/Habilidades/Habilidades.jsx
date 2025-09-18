@@ -3,7 +3,7 @@ import HabilidadesCard from "./HabilidadesCard";
 
 const Habilidades = () => {
   return (
- <ContainerHabilit>
+ <ContainerHabilit id="Skills">
       <ContentHabiliti>
         <HabilidadesCard/>
 
@@ -15,7 +15,7 @@ const Habilidades = () => {
 
 export default Habilidades
 
-const ContainerHabilit = styled.div`
+const ContainerHabilit = styled.section`
   display: flex;
   justify-content:center;
   width: 100%;
@@ -26,24 +26,30 @@ const ContainerHabilit = styled.div`
     
     
   }
-  @media (max-width: 648px) { 
-   
-  }
+
   margin-left: auto;
   margin-right: auto;
- 
+   @media (max-width: 648px) { 
+   width: 70%;
+  }
+    @media (max-width: 348px) { 
+   width: 90%;
+  }
   
 
   `;
   
   const ContentHabiliti = styled.div`
-    width: 90%;
-    background-color:transparent;
-   @media (min-width: 580px){
-   width: 70%;
-   display: flex;
-    align-items: center;
-    justify-content: center;
+ 
    
-}
+    @media (min-width: 580px){
+      width: 70%;
+      display: flex;
+    } 
+    
+    @media (max-width: 648px) { 
+      font-size: 1em;
+      line-height: 1.3;
+      width: 90%;
+    }
   `;
