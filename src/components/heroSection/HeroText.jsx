@@ -14,16 +14,16 @@ const HeroText = () => {
             Contacto
           </ContactRedes>
            <RedesLinks>
-          <a href="">
+          <a href="https://www.facebook.com/bruno.ponce.dev">
           <FaFacebookF/>
           </a>
-           <a href="https://linkedin.com/in/tuPerfil" target="_blank" rel="noopener noreferrer">
+           <a href="https://linkedin.com/in/tuPerfil" rel="noopener noreferrer">
           <FaLinkedinIn  />
           </a>
-          <a href="mailto:https://mail.google.com/mail/u/0/#inbox">
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
             <MdEmail  />
           </a>
-          <a href="https://www.tiktok.com/@tuUsuario" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@tuUsuario"  rel="noopener noreferrer">
             <FaTiktok />
           </a>
           </RedesLinks>
@@ -75,6 +75,13 @@ const TitleH1 = styled.h1`
 const Parrafo = styled.div`
  
 `;
+
+const ContactRedes = styled.h3`
+    font-family: ${({ theme }) => theme.fonts.body};
+ color: #056a5e;
+ font-size: 1.5em;
+ margin: 10px 0;
+`;
 const RedesSocial = styled.div`
   display: flex;
   flex-direction: column;
@@ -85,7 +92,7 @@ const RedesSocial = styled.div`
   
 `;
 
-const  RedesLinks = styled(Link)`
+const  RedesLinks = styled.div`
   font-size:  30px;
     display: flex;
     flex-direction: row;
@@ -112,9 +119,3 @@ const  RedesLinks = styled(Link)`
     }
 `;
 
-const ContactRedes = styled.h3`
-    font-family: ${({ theme }) => theme.fonts.body};
- color: #056a5e;
- font-size: 1.5em;
- margin: 10px 0;
-`;

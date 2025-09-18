@@ -27,7 +27,7 @@ const HeroMain = () => {
 export default HeroMain
 
 const ContainerHeroMain = styled.div`
-margin-top: 6rem;
+margin-top: 2rem;
 /* background-color: #09243c; */
 background-color: transparent;
    width: 100%;
@@ -37,11 +37,10 @@ background-color: transparent;
   align-items: center;
   justify-content: center; 
   z-index: 10;
- 
+ margin-bottom: 1rem;
   
   @media screen and (max-width: 700px) {
-    margin-top: 7rem;
-  
+ 
      width: 100%; 
    }
     
@@ -77,13 +76,15 @@ const ContainerText = styled.div`
 flex: 1;
  width: 80%;
  background-color: transparent;
+
+
  /*   display: flex;
  padding: 30px;
  background-color: transparent;
 */
   @media screen and (max-width: 700px) {
     width: 100%;
-   padding:  30px;
+   padding: 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +92,6 @@ flex: 1;
 `;
 
 const ContainerPicture = styled.div`
-
 display: flex;
 align-items: center;
 justify-content: center;
