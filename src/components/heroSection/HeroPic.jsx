@@ -1,14 +1,14 @@
 import styled from "styled-components"
-import ImgbrunoPonce from "../../assets/img/bruno-ponces-img-pequena.png"
+import ImgbrunoPonce from "../../assets/img/bruno-ponces.png"
 
 const HeroPic = () => {
   return (
     <ContainerImg>
+      <CirculoFondo>   </CirculoFondo>
       <WrapperImagen >
         <img src={ImgbrunoPonce} alt="" />
       </WrapperImagen>
-      {/* <CirculoFondo>   </CirculoFondo> */}
-   
+      
       </ContainerImg>
   )
 }
@@ -16,96 +16,70 @@ const HeroPic = () => {
 export default HeroPic
 
 const ContainerImg = styled.div`
-  flex: 1;
+ flex: 1;
   display: flex;
   justify-content: center;
   
  width: 100%;
-   /* height: 20rem;
-  background-color: transparent;
-  backdrop-filter: blur(16px);
-
-  position: relative; */
-  
-
+background-color: transparent;
       @media screen and (max-width: 700px) {
       width: 100%;
-      height: 10rem;
-    }
+      height: 12rem;
+    } 
 
 
 `;
-// const CirculoFondo = styled.div`
+const CirculoFondo = styled.span`
 
- 
-// position: absolute;
-// top: 5rem;
-//  background-color: #00ffff;
-//   width: 100%;
-//   height: 50vh;
-  
-// `;
+ width: 25%;
+position: absolute;
+top: 10rem;
+ background-color: #0fb4f5;
+ border-radius: 9999px;
+  height: 50vh;
+    @media screen and (max-width: 700px) {
+    width: 40%;
+    height: 20vh;
+    top: 24rem;
+  } 
+`;
 
 const WrapperImagen = styled.div`
+position: absolute;
+height: 60%;
 
+
+
+top: 6rem;
+overflow: hidden;
 img{
-  width: 350px;
-  height: 350px;
+ 
+  width: 440px;
+  height: auto;
   object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #0e5c5c;
-  box-shadow:  0 0 25px rgba(108, 99, 255, .5);
+ 
+
+  /* border: 5px solid #0e5c5c; */
+  /* box-shadow:  0 0 25px rgba(108, 99, 255, .5); */
   transition: all .3s;
     
-background: linear-gradient(
+/* background: linear-gradient(
     to top,
     ${({ theme }) => theme.colors.grey},
     ${({ theme }) => theme.colors.black}
-  );
+  ); */
     @media screen and (max-width: 700px) {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 80vh;
    
   } 
 }
-/* position: relative;
-
-  width: 100%;
-  height: 20rem;
-
-background: linear-gradient(
-  to bottom,
-  rgba(113, 63, 160, 0.1) 0%,   
-  ${({ theme }) => theme.colors.cyan} 25%, 
-  ${({ theme }) => theme.colors.black} 100% 
-);
-
- 
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 90%;
-  
-  
-  max-width: 480px;
-
-  overflow: hidden;
   @media screen and (max-width: 700px) {
-    width: 85%;
-    border-radius: 300px;
-    height: 10rem;
-  }
-
-  img {
-    position: absolute;
-    top: -1rem;
-    width: 100%;
-    max-width: 600px;
-
-    @media screen and (max-width: 700px) {
-      width: 100%;
-        top: 1rem;
-    }
-  } */
+  background-color: transparent;
+    height: 30vh;
+    width: 60%;
+    top: 0;
+  border-radius: 9999px;
+   position: relative;
+  } 
 `;
