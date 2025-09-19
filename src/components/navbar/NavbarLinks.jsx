@@ -28,7 +28,11 @@ const NavbarLinks = ({menuMobile}) => {
     <LinkUl menuMobile={menuMobile}>
       {Links.map((itemLink, index) => (
         <LinkLi key={index}>
-          <Enlace to={itemLink.id} smooth={true} duration={500}>
+          <Enlace to={itemLink.id}
+           smooth={true}
+            duration={500}
+            offset={-70}
+            >
             {itemLink.section}
           </Enlace>
         </LinkLi>
