@@ -1,0 +1,15 @@
+# Activar mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+# --- Eliminar el parámetro fbclid de Facebook ---
+RewriteCond %{QUERY_STRING} (^|&)fbclid=[^&]+(&|$) [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+
+# --- Evitar reescribir index.html ---
+RewriteRule ^index\.html$ - [L]
+
+# --- Redirigir todo lo que no sea archivo o carpeta existente a index.html ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
