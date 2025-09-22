@@ -4,7 +4,7 @@ import HeroPic from "../heroSection/HeroPic";
 
 const HeroMain = () => {
   return (
-    <ContainerHeroMain>
+    <ContainerHeroMain id="Home">
       <WrapperHero>
       <ContainerText>
         <HeroText/>
@@ -18,7 +18,7 @@ const HeroMain = () => {
       
         </WrapperHero>
           <BtnDescargaCv>
-          <a href="">Descarga CV</a>
+          <a href="/Bruno-ponce.pdf">Descarga CV</a>
         </BtnDescargaCv>
     </ContainerHeroMain>
   )

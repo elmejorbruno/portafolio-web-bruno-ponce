@@ -31,10 +31,10 @@ background-color: transparent;
 `;
 const CirculoFondo = styled.span`
 
- width: 25%;
+ width: 27%;
 position: absolute;
 top: 10rem;
- background-color: #0fb4f5;
+ background-color: rgba(15, 180, 245, .3);
  border-radius: 9999px;
   height: 50vh;
     @media screen and (max-width: 700px) {
