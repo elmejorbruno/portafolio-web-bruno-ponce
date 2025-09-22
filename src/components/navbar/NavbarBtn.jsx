@@ -4,7 +4,7 @@ import styled from "styled-components";
 const NavbarBtn = () => {
   return (
     <NavBtn > 
-      <Botton><a href="">Contacto</a></Botton>
+      <Botton><a href="https://mail.google.com/mail/u/0/#inbox">Contacto</a></Botton>
       <LuArrowDownRight/>
     </NavBtn>
   )

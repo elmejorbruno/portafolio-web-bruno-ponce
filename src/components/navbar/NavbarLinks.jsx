@@ -1,21 +1,27 @@
-import { Link } from "react-router-dom"
+
+import {Link as ScrollLink } from "react-scroll"
 import styled from "styled-components"
 
 const Links = [
   {
+    id: "Home",
+    link: "Home", 
+    section: 'Inicio' 
+  },
+  {
     id: "AboutMe",
-    link: "#About Me", 
+    link: "About Me", 
     section: 'Sobre mi' 
   },
   {
     id: "Skills",
-   link: "#Skills",
+   link: "Skills",
    section: 'Habilidades' 
   },
   
   {
     id: "Projects",
-    link: "#Projects", 
+    link: "Projects", 
     section: 'Proyectos' 
   },
  
@@ -29,9 +35,8 @@ const NavbarLinks = ({menuMobile}) => {
       {Links.map((itemLink, index) => (
         <LinkLi key={index}>
           <Enlace to={itemLink.id}
-           smooth={true}
-            duration={500}
-            offset={-70}
+           smooth={false}
+           
             >
             {itemLink.section}
           </Enlace>
@@ -89,7 +94,7 @@ const LinkLi = styled.li`
   }
 
 `;
-const Enlace = styled(Link)`
+const Enlace = styled(ScrollLink)`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.white};
     cursor: pointer;
