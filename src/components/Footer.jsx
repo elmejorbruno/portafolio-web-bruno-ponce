@@ -15,7 +15,7 @@ const Footer = () => {
              <a href="https://linkedin.com/in/tuPerfil"  rel="noopener noreferrer">
                <FaLinkedinIn  />
              </a>
-             <a href="mailto:https://mail.google.com/mail/u/0/#inbox">
+             <a href="mailto:https:poncbruno@gmail.com">
                 <MdEmail  />
               </a>
               <a href="https://www.tiktok.com/@tuUsuario" rel="noopener noreferrer">
