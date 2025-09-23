@@ -9,7 +9,7 @@ import { IoMdClose } from "react-icons/io";
 
 const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+const closeMenu = () => setMenuOpen(false);
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
@@ -33,7 +33,7 @@ const NavbarMain = () => {
         <NavWrapper>
           <NavbarLogin />
           <MenuMobileWrapper menuOpen={menuOpen}>
-            <NavbarLinks menuMobile={menuOpen} />
+            <NavbarLinks menuMobile={menuOpen} closeMenu={closeMenu} />
           </MenuMobileWrapper>
           <NavbarBtn />
           {/* <ContainerLink menuOpen={menuOpen}>
@@ -136,19 +136,24 @@ background-color: blue;
 // `;
 
 const MenuMobileWrapper = styled.div`
-  text-align: left;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
+  position: fixed;
+  top: 90px;
   right: 0;
-  left: 20rem;
-  transform: translateX(-50%);
+  left: 0rem;
+  right: ${({ menuOpen }) => (menuOpen ? "0" : "-100%")};
+  width:  100%;
+  width: 100%;
+  transition: right 0.5s ease-in-out;
   display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
   background-color: rgba(32, 101, 101, 0.7);
   backdrop-filter: blur(10px);
-  width:  50%;
- 
-  padding: 3rem 3rem;
+  z-index: 90;
+  padding: 2rem 0;
+  
   font-size: 1.25em;
  
   @media (min-width: 824px) {

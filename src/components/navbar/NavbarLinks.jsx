@@ -28,7 +28,7 @@ const Links = [
   
 ]
 
-const NavbarLinks = ({menuMobile}) => {
+const NavbarLinks = ({menuMobile, closeMenu}) => {
 
   return (
     <LinkUl menuMobile={menuMobile}>
@@ -36,7 +36,7 @@ const NavbarLinks = ({menuMobile}) => {
         <LinkLi key={index}>
           <Enlace to={itemLink.id}
            smooth={false}
-           
+           onClick={closeMenu}
             >
             {itemLink.section}
           </Enlace>
