@@ -4,11 +4,11 @@ import ImgbrunoPonce from "../../assets/img/bruno-ponces.png"
 const HeroPic = () => {
   return (
     <ContainerImg>
-      <CirculoFondo>   </CirculoFondo>
+      <CirculoFondo>   
       <WrapperImagen >
         <img src={ImgbrunoPonce} alt="" />
       </WrapperImagen>
-      
+      </CirculoFondo>
       </ContainerImg>
   )
 }
@@ -19,42 +19,51 @@ const ContainerImg = styled.div`
  flex: 1;
   display: flex;
   justify-content: center;
-  
+  padding: 20px;
+  box-sizing: border-box;
  width: 100%;
 background-color: transparent;
       @media screen and (max-width: 700px) {
       width: 100%;
       height: 12rem;
+     padding: 0;
     } 
 
 
 `;
 const CirculoFondo = styled.span`
+  width: 80%;
+  height: 60vh;
+  padding: 10px;
+  background-color: rgba(15, 180, 245, .3);
+  border-radius: 9999px;
+  overflow: hidden;
 
- width: 27%;
-position: absolute;
-top: 10rem;
- background-color: rgba(15, 180, 245, .3);
- border-radius: 9999px;
-  height: 50vh;
     @media screen and (max-width: 700px) {
-    width: 40%;
-    height: 20vh;
-    top: 24rem;
-  } 
+      width: 35%;
+      height: 25vh;
+  
+    } 
+     @media screen and (max-width: 500px) {
+      width: 55%;
+      height: 25vh;
+    } 
 `;
 
 const WrapperImagen = styled.div`
-position: absolute;
-height: 60%;
+position: relative;
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+background-color: transparent;
 
+top: 1rem;
+box-sizing: border-box;
 
-
-top: 6rem;
-overflow: hidden;
 img{
  
-  width: 440px;
+  width: 460px;
   height: auto;
   object-fit: cover;
  
@@ -69,17 +78,16 @@ img{
     ${({ theme }) => theme.colors.black}
   ); */
     @media screen and (max-width: 700px) {
-    width: 100%;
-    height: 80vh;
    
+     height: 60vh;
+
   } 
+   @media screen and (max-width: 400px) {
+      height: 45vh;
+  
+    } 
 }
   @media screen and (max-width: 700px) {
-  background-color: transparent;
-    height: 30vh;
-    width: 60%;
-    top: 0;
-  border-radius: 9999px;
-   position: relative;
+   top: 0rem;
   } 
 `;

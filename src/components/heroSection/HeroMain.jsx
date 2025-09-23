@@ -68,6 +68,10 @@ justify-content: center;
     @media screen and (max-width: 700px) {
     width: 90%;
     flex-direction: row;
+  } 
+    @media screen and (max-width: 500px) {
+    width: 100%;
+    flex-direction: row;
    
   } 
 `;
@@ -136,5 +140,10 @@ const BtnDescargaCv = styled.div`
     ${({ theme }) => theme.colors.black}
   );
   }
+   @media screen and (max-width: 500px) {
+     font-size: 1rem;
+      padding: .8rem;
+    } 
   } 
+  
 `;

@@ -17,10 +17,10 @@ const HeroText = () => {
           <a href="https://www.facebook.com/bruno.ponce.dev">
           <FaFacebookF/>
           </a>
-           <a href="https://linkedin.com/in/tuPerfil" rel="noopener noreferrer">
+           <a href=" https://www.linkedin.com/feed/" rel="noopener noreferrer">
           <FaLinkedinIn  />
           </a>
-          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=poncbruno@gmail.com">
             <MdEmail  />
           </a>
           <a href="https://www.tiktok.com/@tuUsuario"  rel="noopener noreferrer">
@@ -42,12 +42,10 @@ const ContainerText = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-   
+    
       @media screen and (max-width: 700px) {
-   text-align: center;
-   
+       text-align: center;
    }
-   
 `;
 
 const TitleH2 = styled.h2`
