@@ -61,7 +61,7 @@ const ProyectoCard = () => {
                         </ProjectTech>
                        
                     </OverlayProject>
-                    
+                    <ContainerBtn>
                      <LinksBoton>
                         <a href={project.codigo}>
                             <FaGithub/> Código
@@ -70,7 +70,7 @@ const ProyectoCard = () => {
                             <FaExternalLinkAlt/> Demo
                         </a>
                         </LinksBoton>
-
+                    </ContainerBtn>
                     </CardProject>
                 </Card>
             ))}
@@ -97,6 +97,7 @@ const ProjectTitle = styled.h2`
     font-size: 1.7em;
     text-align: center;
   }
+  
 `;
 
 const GridGaleria = styled.div`
@@ -201,6 +202,10 @@ const Title = styled.h3`
      font-size: 1.5em;
     
   }
+   @media (max-width: 400px) { 
+      height: 6vh;
+      font-size: 1.3em;
+    }
 
 `;
 
@@ -210,7 +215,7 @@ const Descrip = styled.div`
     text-align: justify;
     
     @media (max-width: 600px) {
-      font-size: .9em;
+      font-size: 1em;
       text-align: center;
       line-height: 1.1;
       margin: 10px;
@@ -219,6 +224,10 @@ const Descrip = styled.div`
 const ProjectTech = styled.div`
     color: #fff;
     font-size: 1em;
+`;
+
+const ContainerBtn = styled.div`
+
 `;
 const LinksBoton = styled.div`
   width: 100%;
@@ -250,9 +259,13 @@ const LinksBoton = styled.div`
             ${({ theme }) => theme.colors.black}
     );
     }
-     @media (max-width: 600px) {
-    font-size: .9em;
-  }
+     
+    @media (max-width: 600px) {
+     
+    }
+     @media (max-width: 350px) { 
+      font-size: .8em;
+    }
   }
 
 `;

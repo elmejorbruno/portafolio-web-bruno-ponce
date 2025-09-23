@@ -48,4 +48,7 @@ const ContainerProject = styled.section`
    @media (max-width: 1150px) { 
     width: 80%;
   }
+   @media (max-width: 400px) { 
+      width: 90%;
+    }
   `;
