@@ -16,7 +16,7 @@ export const dataHabilidades =[
         icono: <FaJs color="#F7DF1E" />,
     },
     {
-        nombre: "React",
+        nombre: "React/JSX",
         icono: <FaReact color="#61DAFB" />,
     },
     {
