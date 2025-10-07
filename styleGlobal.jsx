@@ -5,6 +5,7 @@ export const theme = {
     black: '#101010',
     white: '#f1efef',
     cyan: '#15d1e8',
+    cyanBlack:' #0b5757',
     lightCyan: '#88ebf5',
     darkCyan: '#007b78',
     orange: '#fb9712',
