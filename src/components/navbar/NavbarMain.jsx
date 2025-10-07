@@ -136,11 +136,12 @@ background-color: blue;
 // `;
 
 const MenuMobileWrapper = styled.div`
+/* --- Estilos para móvil --- */
   position: fixed;
   top: 90px;
-  right: 0;
-  left: 0rem;
   right: ${({ menuOpen }) => (menuOpen ? "0" : "-100%")};
+ 
+  left: 0;
   width:  100%;
   width: 100%;
   transition: right 0.5s ease-in-out;
@@ -156,10 +157,12 @@ const MenuMobileWrapper = styled.div`
   
   font-size: 1.25em;
  
+    /* --- Estilos para escritorio --- */
   @media (min-width: 824px) {
-    position: relative;
-    display: flex !important;
+    position: static;
+    display: flex ;
     flex-direction: row;
+    
     top: auto;
     left: auto;
     transform: none;
