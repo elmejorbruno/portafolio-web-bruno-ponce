@@ -1,0 +1,6 @@
+# Permitir a todos los robots acceder a todo
+User-agent: *
+Allow: /
+
+# Ubicación de tu sitemap
+Sitemap: https://portafoliowebdev.com//sitemap.xml
