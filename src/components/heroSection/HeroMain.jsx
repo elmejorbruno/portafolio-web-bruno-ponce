@@ -18,8 +18,14 @@ const HeroMain = () => {
       
         </WrapperHero>
           <BtnDescargaCv>
-          <a href="/Bruno-ponce.pdf">Descarga CV</a>
-        </BtnDescargaCv>
+            <a className="curriculo-no-tecnico" href="/Curriculum-no-tecnico.pdf" title="Currículo no técnico">
+              Descarga CV
+            </a>
+            <a className="curriculo-tecnico" href="/curriculum-CV-Tecnico.pdf"   title="Currículo técnico">
+              Descarga CV
+            </a>
+          </BtnDescargaCv>
+
     </ContainerHeroMain>
   )
 }
@@ -49,7 +55,7 @@ const WrapperHero = styled.div`
  align-items: center;
 justify-content: center;
  
- 
+ /* background-color:yellow; */
  @media screen and (min-width: 700px) {
    justify-content: space-between;
      max-width: 1200px;
@@ -62,7 +68,7 @@ justify-content: center;
   
   } 
     @media screen and (max-width: 1000px) {
-    width: 100%;
+    width: 95%;
    
   } 
     @media screen and (max-width: 700px) {
@@ -99,9 +105,9 @@ const ContainerPicture = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+
 @media screen and (min-width: 700px) {
   width: 100%;
-  
   
 }
 @media screen and (max-width: 1200px) {
@@ -118,28 +124,54 @@ const BtnDescargaCv = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
-
-  a{
+  gap: 10px;
+  a {
     color: #fff;
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
-    padding: .6rem;
-    background: linear-gradient(
+    padding: .6rem 1rem;
+  
+  border: 1px solid cyan;
+  border-radius: 20px;
+  transition:  all 0.3s ease-in-out;
+
+   }
+  .curriculo-no-tecnico{
+  background: linear-gradient(
     to right,
     ${({ theme }) => theme.colors.grey},
     ${({ theme }) => theme.colors.black}
   );
-  border: 1px solid cyan;
-  border-radius: 20px;
-
   &:hover{
      background: linear-gradient(
     to left,
-    ${({ theme }) => theme.colors.cyan},
+    ${({ theme }) => theme.colors.cyanBlack},
     ${({ theme }) => theme.colors.black}
   );
   }
+  
+ 
+   @media screen and (max-width: 500px) {
+     font-size: 1rem;
+      padding: .8rem;
+    } 
+  } 
+    .curriculo-tecnico{
+     background: linear-gradient(
+          to left,
+          ${({ theme }) => theme.colors.black},
+          ${({ theme }) => theme.colors.cyanBlack}
+        );
+        &:hover {
+         background: linear-gradient(
+          to right,
+          ${({ theme }) => theme.colors.cyanBlack},
+          ${({ theme }) => theme.colors.grey}
+        );
+      }
+  
+ 
    @media screen and (max-width: 500px) {
      font-size: 1rem;
       padding: .8rem;
