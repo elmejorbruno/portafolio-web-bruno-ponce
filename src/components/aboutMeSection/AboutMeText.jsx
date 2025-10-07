@@ -4,9 +4,8 @@ const AboutMeText = () => {
   return (
     <ContainerText>
       <AboutTitle>Sobre Mi</AboutTitle>
-      <ParrafoAbout>Soy desarrollador/a Frontend con 2 años de experiencia creando interfaces modernas, funcionales y enfocadas en la experiencia del usuario. He trabajado especialmente en áreas como backend, optimización SEO, accesibilidad y buenas prácticas de desarrollo web, el rendimiento en la web y la integración de herramientas como Google Analytics, Tag Manager y control de versiones con Git. desarrollando desde sitios informativos hasta aplicaciones web interactivas.</ParrafoAbout>
+      <ParrafoAbout>Soy programador web con dos años de experiencia desarrollando sitios y aplicaciones interactivas. He trabajado en proyectos donde diseño con un enfoque en la experiencia del usuario, la navegación fluida y el diseño responsive, asegurando que se vea y funcione bien en cualquier dispositivo.</ParrafoAbout>
 
-<ParrafoAbout>Durante este tiempo, he aprendido a convertir ideas en soluciones digitales funcionales, adaptándome a los retos del diseño responsive. Aunque mi enfoque principal ha sido el desarrollo Frontend, me encuentro en constante aprendizaje para ampliar mis habilidades, Me gusta investigar, experimentar y seguir creciendo profesionalmente.</ParrafoAbout>
 
 
     </ContainerText>
