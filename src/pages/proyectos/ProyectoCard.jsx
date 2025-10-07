@@ -1,42 +1,37 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import styled from "styled-components";
-import PortafolioWeb from "../../assets/img/portafolio-collas.png";
 import TecnohumanitiWeb from "../../assets/img/tecnohumaniti-web-inicio.png";
 import TecnohumanitiBlog from "../../assets/img/tecnohumaniti-blog-collas.png";
 import ImgWebRedes from "../../assets/img/web-redes-sociales-collas.png";
 
 const dataProyectos = [
-  {
-    titulo: "Portfolio Web",
-    descripcion: "Sitio personal para mostrar mis habilidades y proyectos. Desarrollado con React y Styled Components.",
-    img: PortafolioWeb,
-      tech: "React, vite",
-    demo: "https://github.com/usuario/portfolio",
-    codigo: "https://github.com/elmejorbruno/portafolio-web-bruno-ponce.git"
-  },
+
   {
     titulo: "Redes sociales",
     descripcion: "Aplicación para gestionar tareas diarias con almacenamiento local y diseño responsive.",
     img: ImgWebRedes,
+    SubtituloTech:"Herramientas:",
        tech: "HTML, CSS",
     demo: "https://elmejorbruno.github.io/plataformas-redes/",
-    codigo: "https://github.com/elmejorbruno/plataformas-redes.git"
+   
   },
    {
     titulo: "Tecnohumaniti",
     descripcion: "Pagina web y blog personal, enfocado en tecnología y humanidades.",
     img: TecnohumanitiWeb,
-      tech: "React, vite",
+    SubtituloTech:"Herramientas:",
+    tech: "React, vite",
     demo: "https://www.tecnohumaniti.com/",
-    codigo: "https://elmejorbruno.github.io/plataformas-redes/"
+   
   },
      {
     titulo: "Tecnohumaniti Blog",
     descripcion: "Blog personal, enfocado en noticias y reflaxiones sobre tecnologias con un enfoque humanista.",
     img: TecnohumanitiBlog,
+    SubtituloTech:"Herramientas:",
     tech: "React, vite",
     demo: "https://www.tecnohumaniti.com/main-blog",
-    codigo: "https://elmejorbruno.github.io/plataformas-redes/"
+
   }
   
   
@@ -57,15 +52,14 @@ const ProyectoCard = () => {
                         <Descrip>{project.descripcion}</Descrip>
                          
                          <ProjectTech>
+                          <h3>{project.SubtituloTech}</h3>
                           <span>{project.tech}</span>
                         </ProjectTech>
                        
                     </OverlayProject>
                     <ContainerBtn>
                      <LinksBoton>
-                        <a href={project.codigo}>
-                            <FaGithub/> Código
-                        </a>
+                        
                         <a href={project.demo}>
                             <FaExternalLinkAlt/> Demo
                         </a>
@@ -224,6 +218,19 @@ const Descrip = styled.div`
 const ProjectTech = styled.div`
     color: #fff;
     font-size: 1em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    h3{
+      font-size: 1em;
+      margin-right: 10px;
+    }
+    span{
+      font-size: .8em;
+    }
+  
 `;
 
 const ContainerBtn = styled.div`
