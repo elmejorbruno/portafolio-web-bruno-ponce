@@ -22,11 +22,30 @@ const ContainerImg = styled.div`
   padding: 20px;
   box-sizing: border-box;
  width: 100%;
-background-color: transparent;
-      @media screen and (max-width: 700px) {
+background-color:transparent;
+  @media screen and (max-width: 1100px) {
+   padding: 0px;
+    align-items: center;
+  } 
+   @media screen and (max-width: 800px) {
+   height: 60vh;
+  } 
+   @media screen and (max-width: 700px) {
+   height: 50vh;
+  } 
+   @media screen and (max-width: 400px) {
+      height: 45vh;
+  
+    } 
+ @media screen and (max-width: 900px) {
+   padding: 0;
+   justify-content: flex-start;
+  } 
+   @media screen and (max-width: 700px) {
       width: 100%;
       height: 12rem;
-     padding: 0;
+      padding: 0;
+    justify-content: center;
     } 
 
 
@@ -38,12 +57,20 @@ const CirculoFondo = styled.span`
   background-color: rgba(15, 180, 245, .3);
   border-radius: 9999px;
   overflow: hidden;
-
-    @media screen and (max-width: 700px) {
-      width: 35%;
-      height: 25vh;
+    @media screen and (max-width: 900px) {
+      width: 65%;
+    height: 45vh;
   
     } 
+    @media screen and (max-width: 860px) {
+      width: 55%;
+      height: 35vh;
+  
+    } 
+     @media screen and (max-width: 700px) {
+      width: 35%;
+      height: 25vh;
+  } 
      @media screen and (max-width: 500px) {
       width: 55%;
       height: 25vh;
@@ -58,7 +85,7 @@ display: flex;
 justify-content: center;
 background-color: transparent;
 
-top: 1rem;
+top:1rem;
 box-sizing: border-box;
 
 img{
@@ -77,17 +104,23 @@ img{
     ${({ theme }) => theme.colors.grey},
     ${({ theme }) => theme.colors.black}
   ); */
-    @media screen and (max-width: 700px) {
+     @media screen and (max-width: 900px) {
    
-     height: 60vh;
+     height: 70vh;
 
+  } 
+   @media screen and (max-width: 800px) {
+   height: 60vh;
+  } 
+   @media screen and (max-width: 700px) {
+   height: 50vh;
   } 
    @media screen and (max-width: 400px) {
       height: 45vh;
   
     } 
 }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
    top: 0rem;
   } 
 `;

@@ -52,6 +52,10 @@ const TitleH2 = styled.h2`
     color: ${({ theme }) => theme.colors.predeter};
     font-size: 3em;
     text-transform: uppercase;
+
+     @media screen and (max-width: 900px) {
+      font-size: 2.6em;
+     } 
       @media screen and (max-width: 700px) {
         font-size: 1.5em;
 
